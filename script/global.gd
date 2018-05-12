@@ -35,7 +35,7 @@ func probVida():
 	P23 = 100 * points/den
 	P4 = 100 * exp(points-20)/den
 	
-	var aleatorio = float(rand_range(0,4)) #minimo 0, maximo 100
+	var aleatorio = float(rand_range(0,101)) #minimo 0, maximo 100
 	if(aleatorio <= P4):
 		return 4
 	elif(aleatorio <= P4 + P23):

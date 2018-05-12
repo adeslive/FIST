@@ -14,7 +14,7 @@ extents = Vector2( 32, 32 )
 custom_solver_bias = 0.0
 extents = Vector2( 42.6667, 42.6667 )
 
-[node name="personaje" type="KinematicBody2D"]
+[node name="personaje" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -49,9 +49,6 @@ audio_bus_override = false
 audio_bus_name = "Master"
 script = ExtResource( 3 )
 _sections_unfolded = [ "Audio Bus", "Collision", "Material", "Visibility" ]
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="colision_touch" type="CollisionShape2D" parent="area_touch" index="0"]
 

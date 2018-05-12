@@ -36,7 +36,7 @@ func spawn():
 			enemigo.position = Vector2(928,320)
 		enemigo.get_node("Sprite").set_scale(Vector2(0.666667,0.666667))
 		get_node("contenedor").add_child(enemigo)
-		yield(utils.create_timer(0.9 - global.get_process_delta_time()*global.spawn_delay),"timeout")
+		yield(utils.create_timer(0.8 - global.get_process_delta_time()*global.spawn_delay),"timeout")
 		
 	pass
 
