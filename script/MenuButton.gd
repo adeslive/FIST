@@ -4,6 +4,7 @@ extends MenuButton
 var popup
 onready var dificultad_label = get_parent().get_node("HBoxContainer/CenterContainer/VBoxContainer/Dificultad")
 
+
 func _ready():
 	
 	popup = get_popup()
@@ -14,5 +15,6 @@ func _ready():
 
 
 func _on_item_pressed(ID):
+	
 	dificultad_label.set_text(popup.get_item_text(ID))
 	global.dif = (ID)^2

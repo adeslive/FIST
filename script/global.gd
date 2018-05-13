@@ -2,7 +2,6 @@ extends Node
 
 
 onready var viewport = get_viewport()
-
 var dif = 0
 var points = 0
 var spawn_delay = 10*dif
@@ -11,9 +10,8 @@ var vel_y = 0
 var e_pos = 0
 var running = false
 var shoot_bool = false
-
-
 var shoot_pos = 0
+
 
 func stop():
 	shoot_bool = false
@@ -22,7 +20,9 @@ func stop():
 	vel_y = 0
 	e_pos = -1
 
+
 func probVida():
+	
 	randomize()
 	var den
 	var P1
@@ -31,9 +31,9 @@ func probVida():
 	
 	den = exp(points-15) + 2*points + exp(10-points)
 	
-	P1 = 100 * exp(7-points)/den
-	P23 = 100 * points/den
-	P4 = 100 * exp(points-20)/den
+	P1 = 100 * exp(8-points)/den
+	P23 = (global.dif + 1) * 100 * points/den
+	P4 = 100 * exp(points-16)/den
 	
 	var aleatorio = float(rand_range(0,101)) #minimo 0, maximo 100
 	if(aleatorio <= P4):
